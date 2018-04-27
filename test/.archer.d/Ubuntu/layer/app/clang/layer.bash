@@ -1,5 +1,5 @@
 layer_help() {
-    echo "app/git"
+    echo "app/clang"
 }
 
 layer_metadata() {
@@ -8,9 +8,9 @@ layer_metadata() {
 }
 
 layer_is_installed() {
-    command -v git 1>/dev/null 2>/dev/null
+    command -v clang 1>/dev/null 2>/dev/null
 }
 
 layer_install() {
-    sudo apt-get -y install git
+    sudo apt-get -y install clang
 }

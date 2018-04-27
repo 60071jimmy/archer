@@ -1,6 +1,5 @@
-
 layer_help() {
-    true
+    echo "app/gcc"
 }
 
 layer_metadata() {
@@ -9,11 +8,9 @@ layer_metadata() {
 }
 
 layer_is_installed() {
-    false
+    command -v gcc 1>/dev/null 2>/dev/null
 }
 
 layer_install() {
-    archer_core_print "install emacs"
-    true
+    sudo apt-get -y install gcc
 }
-
